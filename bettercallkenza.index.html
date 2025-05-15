@@ -1,0 +1,856 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 12.0px 0.0px; font: 16.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; -webkit-text-stroke: #000000; min-height: 19.0px}
+    p.p5 {margin: 0.0px 0.0px 16.0px 0.0px; font: 16.0px Times; -webkit-text-stroke: #000000}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; -webkit-text-stroke: #000000}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85); min-height: 13.0px}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: #000000}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; -webkit-text-stroke: #000000}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9; min-height: 19.0px}
+    li.li7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    li.li14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px Times; font-kerning: none}
+    span.s3 {text-decoration: underline ; font-kerning: none}
+    span.s4 {font-kerning: none; background-color: #b3b3b3}
+    span.s5 {font-kerning: none; background-color: #ffffff}
+    span.s6 {font: 11.0px Times; font-kerning: none; background-color: #ffffff}
+    span.s7 {-webkit-text-stroke: 0px #000000}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">body {</span><span class="s2"><br>
+</span><span class="s1">font-family: 'Poppins', sans-serif;</span><span class="s2"><br>
+</span><span class="s1">background: linear-gradient(135deg, #f0f9ff 0%, #f8e7f1 100%);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.gradient-bg {</span><span class="s2"><br>
+</span><span class="s1">background: linear-gradient(135deg, #ff80bf 0%, #87cefa 100%);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.tab-active {</span><span class="s2"><br>
+</span><span class="s1">background-color: rgba(255, 128, 191, 0.3);</span><span class="s2"><br>
+</span><span class="s1">border-bottom: 3px solid #ff80bf;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.custom-shadow {</span><span class="s2"><br>
+</span><span class="s1">box-shadow: 0 10px 25px rgba(255, 128, 191, 0.2);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.btn-primary {</span><span class="s2"><br>
+</span><span class="s1">background: linear-gradient(135deg, #ff80bf 0%, #87cefa 100%);</span><span class="s2"><br>
+</span><span class="s1">transition: all 0.3s ease;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.btn-primary:hover {</span><span class="s2"><br>
+</span><span class="s1">transform: translateY(-2px);</span><span class="s2"><br>
+</span><span class="s1">box-shadow: 0 10px 20px rgba(255, 128, 191, 0.3);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.input-field {</span><span class="s2"><br>
+</span><span class="s1">border: 2px solid #e2e8f0;</span><span class="s2"><br>
+</span><span class="s1">transition: all 0.3s ease;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.input-field:focus {</span><span class="s2"><br>
+</span><span class="s1">border-color: #ff80bf;</span><span class="s2"><br>
+</span><span class="s1">box-shadow: 0 0 0 3px rgba(255, 128, 191, 0.2);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">/* Animation pour la bulle de taux */</span><span class="s2"><br>
+</span><span class="s1">.rate-bubble {</span><span class="s2"><br>
+</span><span class="s1">animation: float 3s ease-in-out infinite;</span><span class="s2"><br>
+</span><span class="s1">position: fixed;</span><span class="s2"><br>
+</span><span class="s1">top: 120px;</span><span class="s2"><br>
+</span><span class="s1">right: 30px;</span><span class="s2"><br>
+</span><span class="s1">z-index: 50;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">@keyframes float {</span><span class="s2"><br>
+</span><span class="s1">0% {</span><span class="s2"><br>
+</span><span class="s1">transform: translateY(0px) rotate(0deg);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+</span><span class="s1">50% {</span><span class="s2"><br>
+</span><span class="s1">transform: translateY(-15px) rotate(3deg);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+</span><span class="s1">100% {</span><span class="s2"><br>
+</span><span class="s1">transform: translateY(0px) rotate(0deg);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">/* Pulse animation for rate bubble */</span><span class="s2"><br>
+</span><span class="s1">@keyframes pulse {</span><span class="s2"><br>
+</span><span class="s1">0% {</span><span class="s2"><br>
+</span><span class="s1">transform: scale(1);</span><span class="s2"><br>
+</span><span class="s1">box-shadow: 0 0 0 0 rgba(255, 128, 191, 0.7);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+</span><span class="s1">70% {</span><span class="s2"><br>
+</span><span class="s1">transform: scale(1.05);</span><span class="s2"><br>
+</span><span class="s1">box-shadow: 0 0 0 15px rgba(255, 128, 191, 0);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+</span><span class="s1">100% {</span><span class="s2"><br>
+</span><span class="s1">transform: scale(1);</span><span class="s2"><br>
+</span><span class="s1">box-shadow: 0 0 0 0 rgba(255, 128, 191, 0);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.pulse {</span><span class="s2"><br>
+</span><span class="s1">animation: pulse 2s infinite;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">/* Style pour la galerie photo */</span><span class="s2"><br>
+</span><span class="s1">.gallery-item {</span><span class="s2"><br>
+</span><span class="s1">transition: all 0.3s ease;</span><span class="s2"><br>
+</span><span class="s1">overflow: hidden;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.gallery-item:hover img {</span><span class="s2"><br>
+</span><span class="s1">transform: scale(1.05);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.gallery-item img {</span><span class="s2"><br>
+</span><span class="s1">transition: transform 0.5s ease;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">/* Creative journey section */</span><span class="s2"><br>
+</span><span class="s1">.journey-container {</span><span class="s2"><br>
+</span><span class="s1">position: relative;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.journey-item {</span><span class="s2"><br>
+</span><span class="s1">position: relative;</span><span class="s2"><br>
+</span><span class="s1">transition: all 0.5s ease;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.journey-item:hover {</span><span class="s2"><br>
+</span><span class="s1">transform: translateY(-10px);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.journey-icon {</span><span class="s2"><br>
+</span><span class="s1">width: 80px;</span><span class="s2"><br>
+</span><span class="s1">height: 80px;</span><span class="s2"><br>
+</span><span class="s1">border-radius: 50%;</span><span class="s2"><br>
+</span><span class="s1">display: flex;</span><span class="s2"><br>
+</span><span class="s1">align-items: center;</span><span class="s2"><br>
+</span><span class="s1">justify-content: center;</span><span class="s2"><br>
+</span><span class="s1">margin: 0 auto 1rem;</span><span class="s2"><br>
+</span><span class="s1">transition: all 0.3s ease;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.journey-item:hover .journey-icon {</span><span class="s2"><br>
+</span><span class="s1">transform: rotate(15deg) scale(1.1);</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.journey-connector {</span><span class="s2"><br>
+</span><span class="s1">position: absolute;</span><span class="s2"><br>
+</span><span class="s1">height: 3px;</span><span class="s2"><br>
+</span><span class="s1">background: linear-gradient(to right, #ff80bf, #87cefa);</span><span class="s2"><br>
+</span><span class="s1">top: 40px;</span><span class="s2"><br>
+</span><span class="s1">z-index: -1;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">@media (max-width: 768px) {</span><span class="s2"><br>
+</span><span class="s1">.journey-connector {</span><span class="s2"><br>
+</span><span class="s1">display: none;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">.rate-bubble {</span><span class="s2"><br>
+</span><span class="s1">top: auto;</span><span class="s2"><br>
+</span><span class="s1">bottom: 20px;</span><span class="s2"><br>
+</span><span class="s1">right: 20px;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">/* Floating elements */</span><span class="s2"><br>
+</span><span class="s1">.floating {</span><span class="s2"><br>
+</span><span class="s1">animation: floating 3s ease-in-out infinite;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">@keyframes floating {</span><span class="s2"><br>
+</span><span class="s1">0% { transform: translate(0, 0px); }</span><span class="s2"><br>
+</span><span class="s1">50% { transform: translate(0, 15px); }</span><span class="s2"><br>
+</span><span class="s1">100% { transform: translate(0, 0px); }</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">/* Creative shapes */</span><span class="s2"><br>
+</span><span class="s1">.shape-blob {</span><span class="s2"><br>
+</span><span class="s1">border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;</span><span class="s2"><br>
+</span><span class="s1">animation: morph 8s linear infinite;</span><span class="s2"><br>
+</span><span class="s1">}</span><span class="s2"><br>
+<br>
+</span><span class="s1">@keyframes morph {</span><span class="s2"><br>
+</span><span class="s1">0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }</span><span class="s2"><br>
+</span><span class="s1">25% { border-radius: 45% 55% 65% 35% / 50% 60% 40% 50%; }</span><span class="s2"><br>
+</span><span class="s1">50% { border-radius: 50% 50% 55% 45% / 55% 45% 55% 45%; }</span><span class="s2"><br>
+</span><span class="s1">75% { border-radius: 55% 45% 45% 55% / 45% 50% 50% 55%; }</span><span class="s2"><br>
+</span><span class="s1">100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }</span><span class="s2"><br>
+</span><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">À partir de</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">2,9%</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Taux fixe</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 19.9px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Votre courtier immobilier de confiance</b></span></h2>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Obtenez le meilleur taux pour votre prêt immobilier avec notre expertise personnalisée.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p7"><span class="s3"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#simulation">Simuler mon prêt</a></span></p>
+<p class="p7"><span class="s3"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#contact">Me contacter</a></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 19.9px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Nos Services</b></span></h2>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Prêt immobilier</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Nous négocions pour vous les meilleures conditions auprès des banques partenaires.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Conseil personnalisé</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Un accompagnement sur mesure pour votre projet immobilier, de A à Z.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Suivi de dossier</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Nous gérons toutes les démarches administratives pour vous faire gagner du temps.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 19.9px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Notre Histoire</b></span></h2>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Kenza Benali</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">"Ma passion est d'aider les gens à réaliser leur rêve immobilier en trouvant les meilleures solutions de financement."</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Fondatrice et directrice de Better Call Kenza</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Better Call Kenza est né d'une vision simple : rendre le financement immobilier accessible à tous. Après 10 ans d'expérience dans le secteur bancaire, j'ai constaté que de nombreux clients se sentaient perdus face à la complexité des prêts immobiliers et n'obtenaient pas toujours les meilleures conditions.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">C'est pourquoi j'ai décidé de créer Better Call Kenza, un cabinet de courtage à taille humaine où chaque client est accompagné personnellement tout au long de son projet.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>La Naissance</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Création de Better Call Kenza à Paris avec une équipe de 2 personnes passionnées.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>L'Expansion</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Ouverture de notre deuxième agence à Lyon et partenariat avec 15 banques nationales.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>La Reconnaissance</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Prix de l'innovation en courtage immobilier et lancement de notre application mobile.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>L'Envol</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Expansion nationale avec 5 agences et une équipe de 25 experts dédiés.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Aujourd'hui</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Plus de 5000 projets financés et un taux de satisfaction client de 98%.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">5000+</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Projets financés</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">98%</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Clients satisfaits</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">25+</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Experts dédiés</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 19.9px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Notre Galerie</b></span></h2>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Nos bureaux à Paris</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Signature d'un prêt immobilier</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Analyse de marché immobilier</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Notre équipe de conseillers</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Remise des clés</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Formation continue</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 19.9px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Simulation de prêt</b></span></h2>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p11"><span class="s4">Simulation de prêt</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Montant du prêt (€)</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Apport personnel (€)</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Durée du prêt (années)</span></p>
+<p class="p12"><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">Sélectionnez une durée</span><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">10 ans</span><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">15 ans</span><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">20 ans</span><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">25 ans</span><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">30 ans</span><span class="s5"> <span class="Apple-converted-space">                               </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Taux d'intérêt (%)</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Type de bien</span></p>
+<p class="p12"><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">Sélectionnez un type</span><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">Appartement</span><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">Maison</span><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">Terrain</span><span class="s5"><span class="Apple-converted-space">                                    </span></span><span class="s6">Local commercial</span><span class="s5"> <span class="Apple-converted-space">                               </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Localisation du bien</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p11"><span class="s4">Calculer ma mensualité</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Résultat de votre simulation</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Mensualité estimée</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">-- €</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Coût total du crédit</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">-- €</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Vous souhaitez obtenir une offre personnalisée ?</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p7"><span class="s3"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#contact">Contactez-nous</a></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 19.9px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Contactez-nous</b></span></h2>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Envoyez-nous un message</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Nom complet</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Email</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Téléphone</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Message</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p11"><span class="s4">Envoyer ma demande</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p9"><span class="s1">Votre message a bien été envoyé. Nous vous contacterons très prochainement !</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Nos coordonnées</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h4 style="margin: 0.0px 0.0px 21.3px 0.0px; font: 16.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Adresse</b></span></h4>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">123 Avenue des Courtiers<br>
+75001 Paris, France</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h4 style="margin: 0.0px 0.0px 21.3px 0.0px; font: 16.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Téléphone</b></span></h4>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">+33 1 23 45 67 89</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h4 style="margin: 0.0px 0.0px 21.3px 0.0px; font: 16.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Email</b></span></h4>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">contact@bettercallkenza.fr</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h4 style="margin: 0.0px 0.0px 21.3px 0.0px; font: 16.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Horaires d'ouverture</b></span></h4>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Lundi - Vendredi: 9h00 - 18h00<br>
+Samedi: 10h00 - 15h00</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 19.9px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Better Call Kenza</b></span></h2>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Votre courtier immobilier de confiance pour tous vos projets de financement.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Liens rapides</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<ul class="ul1">
+  <li class="li14"></li>
+  <li class="li7"><span class="s7"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#accueil"><span class="s3">Accueil</span></a></span></li>
+  <li class="li14"></li>
+  <li class="li7"><span class="s7"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#services"><span class="s3">Services</span></a></span></li>
+  <li class="li14"></li>
+  <li class="li7"><span class="s7"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#histoire"><span class="s3">Notre Histoire</span></a></span></li>
+  <li class="li14"></li>
+  <li class="li7"><span class="s7"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#galerie"><span class="s3">Galerie</span></a></span></li>
+  <li class="li14"></li>
+  <li class="li7"><span class="s7"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#simulation"><span class="s3">Simulation</span></a></span></li>
+  <li class="li14"></li>
+  <li class="li7"><span class="s7"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#contact"><span class="s3">Contact</span></a></span></li>
+  <li class="li14"></li>
+</ul>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Services</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<ul class="ul1">
+  <li class="li14"></li>
+  <li class="li7"><span class="s7"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"><span class="s3">Prêt immobilier</span></a></span></li>
+  <li class="li14"></li>
+  <li class="li7"><span class="s7"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"><span class="s3">Rachat de crédit</span></a></span></li>
+  <li class="li14"></li>
+  <li class="li7"><span class="s7"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"><span class="s3">Assurance emprunteur</span></a></span></li>
+  <li class="li14"></li>
+  <li class="li7"><span class="s7"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"><span class="s3">Conseil patrimonial</span></a></span></li>
+  <li class="li14"></li>
+</ul>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 18.7px 0.0px; font: 18.7px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Newsletter</b></span></h3>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">Recevez nos conseils et actualités immobilières</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">© 2023 Better Call Kenza. Tous droits réservés.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p15"><span class="s1"><a href="https://www.canva.com/design/DAGnietWWTA/OvOuSeNhcAswmFKFCFis9w/edit#"></a></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+</body>
+</html>
